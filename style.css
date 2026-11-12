@@ -1,0 +1,607 @@
+/* GERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    /*color: #263238;*/
+    line-height:1.65
+}
+section {
+    padding: 50px 8%;
+}
+
+/* HEADER - CABEÇALHO */
+
+/* HEADER - CABEÇALHO */
+
+header {
+    padding: 25px 8%;
+    background: #eaeee0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+header h3 {
+    margin: 0;
+    color: #000000;
+    white-space: nowrap;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav a {
+    color: #364911;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #718e35;
+}
+
+nav a:focus-visible {
+    outline: 2px solid #718e35;
+    outline-offset: 4px;
+}
+
+/* BOTÃO DO MENU MOBILE */
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: none;
+    color: #364911;
+    font-size: 28px;
+    padding: 5px;
+    margin: 0;
+    cursor: pointer;
+}
+/* EFEITOS DO BOTÃO DO MENU */
+
+.menu-toggle:hover {
+    background: transparent;
+    color: #d9e6c1;
+}
+
+.menu-toggle:focus,
+.menu-toggle:active {
+    background: transparent;
+    color: #364911;
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+.numerado{    /*defino todos os subtítulos com numero*/
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:.16em;
+    color: #364911;
+}
+
+/* INÍCIO - Olá, eu sou Alexandre Rodrigues */
+#inicio {
+    padding: 40px 8%;
+    background: #fcfcfc;
+}
+#inicio article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#inicio h1 {
+    font-size: 75px;
+    line-height:1.1;
+    letter-spacing:-.025em;
+    margin-bottom:25px;
+    margin-top:15px;
+    margin-right: 10%;
+}
+
+#inicio h1 span {
+  color: #718e35;
+}
+#inicio .card:last-child {
+    overflow: hidden;
+    border-radius: 5%;
+}
+
+
+/* ANIMAÇÃO CONTÍNUA DA FOTOGRAFIA */
+
+#inicio img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 5%;
+
+    animation: fotoAnimada 4s ease-in-out infinite;
+}
+
+@keyframes fotoAnimada {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+/* Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+    #inicio img {
+        animation: none;
+    }
+}
+
+
+/* Respeita usuários que preferem movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+    #inicio img {
+        transition: none;
+    }
+}
+
+/* Sobre mim */
+#sobre {
+    padding: 50px 8%;
+    background: #fcfcfc;
+}
+#sobre h2{    /*Título grande da seção*/
+    font-family:'Playfair Display',serif;
+    font-size: 70px;
+    line-height:1.1;
+    letter-spacing:-.025em;
+    margin-bottom:35px;
+    margin-top:15px;
+}
+#sobre .descricao{    
+    font-size:15px;
+    color:#484c45;
+    margin-right: 15%;
+}
+
+/* TABELA - HABILIDADES DE PROGRAMAÇÃO */
+
+#habilidades table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    text-align: left;
+    font-size: 15px;
+}
+
+
+
+/* Título da tabela */
+#habilidades caption {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #888;
+}
+
+/* Cabeçalho */
+#habilidades thead {
+    background-color: #012816;
+    color: #ffffff;
+}
+
+#habilidades th {
+    padding: 16px 20px;
+    font-weight: 600;
+}
+
+/* Células */
+#habilidades td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Linhas alternadas */
+#habilidades tbody tr:nth-child(even) {
+    background-color: #f7f9f7;
+}
+
+/* Efeito ao passar o mouse */
+#habilidades tbody tr:hover {
+    background-color: #eaf2ec;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*FORMAÇÃO ACADÊMICA*/
+#formacao {
+    padding: 50px 8%;
+    background: #f2f8ef;
+}
+#formacao article{
+    padding: 10px;
+}
+#formacao h2{      /*Título grande da seção*/
+    font-family:'Playfair Display',serif;
+    font-size: 70px;
+    line-height:1.1;
+    letter-spacing:-.025em;
+    margin-bottom:25px;
+    margin-top:15px;
+}
+#formacao h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    line-height: 1.3;
+    letter-spacing: -.010em;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-left: 5%;
+    overflow-wrap: break-word;
+}
+
+#formacao .date{
+    font-size:12px; margin-left:5%; font-weight:700;letter-spacing:.16em; color:  #718e35;
+}
+#formacao .universidade{
+    font-size:15px;
+    color:#484c45;
+    margin-left: 5%;
+}
+/*INTERESSES*/
+#interesses {
+    padding: 50px 8%;
+    background: #fcfcfc;
+}
+#interesses h2{      /*Título grande da seção*/
+    font-family:'Playfair Display',serif;
+    font-size: 70px;
+    line-height:1.1;
+    letter-spacing:-.025em;
+    margin-bottom:25px;
+    margin-top:15px;
+}
+#interesses .descricao{      
+    font-size:15px;
+    color:#484c45;
+}
+#interesses h3{      
+    font-family:'Playfair Display',serif;
+    font-size: 20px;
+    line-height:0.5;
+    letter-spacing:-.010em;
+    margin-bottom:5px;
+    margin-top:10px;
+    margin-left:0% ;
+}
+#interesses article {
+    flex: 1;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f2f8ef;
+}
+#interesses div {
+    margin-top:50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#extra {
+    padding: 50px 8%;
+    background: #fcfcfc;
+}
+#extra h2{      /*Título grande da seção*/
+    font-family:'Playfair Display',serif;
+    font-size: 70px;
+    line-height:1.1;
+    letter-spacing:-.025em;
+    margin-bottom:25px;
+    margin-top:15px;
+}
+#extra img {
+   width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border: 1.2px solid #ddd;
+    border-radius: 5%;
+}
+#extra div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#extra .descricao{      /*uso o mesmo texto no item 3*/
+    font-size:15px;
+    color:#484c45;
+}
+/*2026.2*/
+ #disciplinas {
+    padding: 50px 8%;
+    background: #f2f8ef;
+}
+#disciplinas h2{      /*Título grande da seção*/
+    font-family:'Playfair Display',serif;
+    font-size: 70px;
+    line-height:1.1;
+    letter-spacing:-.025em;
+    margin-bottom:25px;
+    margin-top:15px;
+}   
+#disciplinas .descricao, li{      
+    font-size:15px;
+    color:#484c45;
+}
+
+#extra img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 5%;
+
+    animation: fotoAnimada 4s ease-in-out infinite;
+}
+
+@keyframes fotoAnimada {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+/* Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+    #extra img {
+        animation: none;
+    }
+}
+
+
+/* Respeita usuários que preferem movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+    #extra img {
+        transition: none;
+    }
+}
+
+
+
+
+
+/*Contato*/
+#contato {
+    padding: 50px 8%;
+    background: #fcfcfc;
+}
+#contato h2{     /*Título grande da seção*/
+    font-family:'Playfair Display',serif;
+    font-size: 70px;
+    line-height:1.1;
+    letter-spacing:-.025em;
+    margin-bottom:25px;
+    margin-top:15px;
+}
+
+
+form {
+    max-width: 600px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid #718e35;
+    border: 1px solid #718e35;
+    background-color: #f7f9f7;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: 1px;
+    border-radius: 10%;
+    background: #718e35;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #364911;
+}
+button:focus-visible {
+    outline: 2px solid #364911;
+    outline-offset: 4px;
+}
+
+/* RODAPÉ */
+
+footer {
+    padding: 20px 8%;
+    background: #eaeee0;
+    color: #364911;
+    text-decoration: none;
+    gap: 12px;
+    font-size:12px;
+    font-weight:600;
+    border-top:1px solid #c0c7c0;
+   
+}
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    /* CABEÇALHO MOBILE */
+
+    header {
+        flex-wrap: wrap;
+        padding: 20px 6%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        width: 100%;
+    }
+
+    header nav.aberto {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 15px 0 5px;
+    }
+
+    /* DEMAIS ELEMENTOS */
+
+    #inicio article {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #inicio h1 {
+        font-size: 48px;
+        margin-right: 0;
+    }
+
+    #inicio img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    section {
+        padding: 40px 6%;
+    }
+    #formacao h3 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-left: 0;
+    margin-bottom: 12px;
+}
+
+    #sobre h2,
+    #formacao h2,
+    #interesses h2,
+    #extra h2,
+    #disciplinas h2,
+    #contato h2 {
+        font-size: 42px;
+    }
+
+    #extra img {
+        max-width: 100%;
+        height: auto;
+    }
+
+}
+
+
+/* ANIMAÇÃO JELLO NO NOME */
+
+.animate-jello {
+    display: inline-block;
+    animation: jello 2s ease;
+}
+
+@keyframes jello {
+    0%, 100% {
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+}
+
+/* Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+    .animate-jello {
+        animation: none;
+    }
+}
